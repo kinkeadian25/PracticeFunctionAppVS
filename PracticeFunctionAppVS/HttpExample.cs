@@ -22,6 +22,7 @@ namespace PracticeFunctionAppVS
 
             string name = req.Query["name"];
 
+            //testing function app, github actions
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
